@@ -58,11 +58,6 @@ app.get('/authors/:id/books', (req, res) => {
     res.json({books : list[Number(req.params.id)-1].books});
 });
 
-app.get('*', (req, res) => {
-    console.log('GET', req.url)
-    res.json({status : 404, message : "Page not found"});
-});
-
 ////////////////////////////////////////////////////////////////
 app.put('*', (req, res) => {
     console.log('GET', req.url)
